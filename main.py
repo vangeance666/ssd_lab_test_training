@@ -1,5 +1,8 @@
 from website import create_app
+from waitress import serve
+
 
 if __name__ == '__main__':
 	app = create_app()
-	app.run(debug=True, host='0.0.0.0')
+    serve(app, host="0.0.0.0", port=5000) # nosec
+	# app.run(debug=False, host='0.0.0.0')

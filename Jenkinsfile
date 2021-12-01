@@ -53,7 +53,6 @@ pipeline {
 			// 		 junit allowEmptyResults: true, testResults: 'test-reports/*.xml'
 			// 	}
 			// }
-
    //      }
 
         stage("Integration Testing") {
@@ -62,11 +61,11 @@ pipeline {
 		        	agent {
 		        		dockerfile {
 							filename 'Dockerfile.ui_test'
-							args "--name app-flask-ui-test --network app-test-network --network-alias app-flask-ui-test -v /root/.m2:/root/.m2"
+							args "--name app-flask-ui-test --network app-test-network --network-alias app-flask-ui-test --expose 5000 -v /root/.m2:/root/.m2"
 		        		}
 		        	}
 		        	steps {		        		
-		        		input message: "wait"		        		
+		        		input message: "wait"
 		        		sh "python main.py"
 		        		input message: "kill ?"
 		        	}
@@ -91,6 +90,7 @@ pipeline {
 		     //    		}
 		     //    	}
 		     //    }
+		     
         	}
 
         }
