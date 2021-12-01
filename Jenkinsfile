@@ -28,26 +28,23 @@ pipeline {
 		//         }
 		//     }
 		// }
-		stage('Code Quality Check via SonarQube') {
-            steps {
-                script {
-                    def scannerHome = tool 'SonarQube';
-                    withSonarQubeEnv() {
-                        sh "${scannerHome}/bin/sonar-scanner -Dsonar.projectKey=OWASP -Dsonar.sources=. -Dsonar.host.url=http://209.97.168.24:9000 -Dsonar.login=995427933f3517afbb3cac97afe2d63f1fd91325"
-                    }
-                }
-            }
-        }
+		// stage('Code Quality Check via SonarQube') {
+  //           steps {
+  //               script {
+  //                   def scannerHome = tool 'SonarQube';
+  //                   withSonarQubeEnv() {
+  //                       sh "${scannerHome}/bin/sonar-scanner -Dsonar.projectKey=OWASP -Dsonar.sources=. -Dsonar.host.url=http://209.97.168.24:9000 -Dsonar.login=995427933f3517afbb3cac97afe2d63f1fd91325"
+  //                   }
+  //               }
+  //           }
+  //       }
 
         stage('Unit Test'){
         	agent {
         		dockerfile {
 					filename 'Dockerfile.unit_test'
-					args """
-						 --name app-flask-unit-test
-						 --network app-test-network
-						 -v /root/.m2:/root/.m2
-					"""
+					args "--name app-flask-unit-test --network app-test-network"
+					
         		}
         	}
             steps{
