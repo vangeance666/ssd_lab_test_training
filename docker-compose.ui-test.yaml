@@ -1,0 +1,25 @@
+version: "3.6"
+
+networks:
+  app-test-network:
+    name: app-test-network
+    external: true
+
+services:
+  shark-flask-ui-test:
+    container_name: app-flask-ui-test
+
+    image: img-app-flask-ui-test:lastest
+
+    stdin_open: true # docker run -i
+    
+    tty: true 
+
+    build:
+      context: ./
+
+    networks:
+      - 'app-test-network'
+
+    expose:
+      - '5000'

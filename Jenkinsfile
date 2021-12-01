@@ -55,25 +55,61 @@ pipeline {
 			// }
    //      }
 
-        stage("Integration Testing") {
-        	parallel {
-        		stage("Deploy Test Server for ui test") {
-		        	agent {
-		        		dockerfile {
-							filename 'Dockerfile.ui_test'
-							args "--name app-flask-ui-test --network app-test-network --network-alias app-flask-ui-test --expose 5000 -v /root/.m2:/root/.m2"
-		        		}
-		        	}
-		        	steps {		        		
-		        		// echo "python main.py at Dockerfile"
-		        		// input message: "wait"
-		        		sh 'python main.py > /dev/null 2&1 &'
+   		stage("Build UI-Testing Container") {
+   			steps {
+   				// Build the ui-test container and runs it for headless testing
+   				sh 'docker-compose -f docker-compose.ui-test.yaml up -d --build'
+   			}
+   		}
 
-		        		
-		        		// sh "python main.py >> /dev/null"
-		        		input message: "kill ?"
-		        	}
-		        }
+   		stage("Headless Browser Testing") {
+        	agent {
+        		dockerfile {
+        			filename 'Dockerfile.ui_test'
+        			args """
+        			--name selnium-ui-test
+        			--network app-test-network
+        			"""
+        		}
+        	}
+        	steps {
+ 				sh 'pytest ui_tests/test.py -v --junitxml="results.xml"'
+        	}
+        	post {
+        		success {
+						junit allowEmptyResults: true, testResults: 'results.xml'
+        		}
+        	}
+        }
+        
+        post {
+        	always {
+        		echo "Tearing down test containers"
+   				sh 'docker-compose -f docker-compose.ui-test.yaml down -v'
+        	}
+        }
+
+       //  stage("Integration Testing") {
+       //  	parallel {
+
+
+       //  		stage("Deploy Test Server for ui test") {
+		     //    	agent {
+		     //    		dockerfile {
+							// filename 'Dockerfile.ui_test'
+							// args "--name app-flask-ui-test --network app-test-network --network-alias app-flask-ui-test --expose 5000 -v /root/.m2:/root/.m2"
+		     //    		}
+		     //    	}
+		     //    	steps {		        		
+		     //    		// echo "python main.py at Dockerfile"
+		     //    		// input message: "wait"
+		     //    		sh 'python main.py > /dev/null 2&1 &'
+
+
+		     //    		// sh "python main.py >> /dev/null"
+		     //    		input message: "kill ?"
+		     //    	}
+		     //    }
 
 
 		     //    stage("Headless Browser Testing") {
@@ -96,9 +132,9 @@ pipeline {
 		     //    	}
 		     //    }
 		     
-        	}
+       //  	}
 
-        }
+       //  }
 
 ////////////////////////////////
 
