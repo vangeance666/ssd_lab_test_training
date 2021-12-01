@@ -41,19 +41,18 @@ pipeline {
         	agent {
         		dockerfile {
 					filename 'Dockerfile.unit_test'
-					args "-it --entrypoint=/bin/bash --network app-test-network"
-					
+					args "--network app-test-network"
         		}
         	}
             steps{
             	echo "hello"
             	input message: "wait"
-            	sh 'python test.py'
+            	// sh 'python test.py'
                 // sh 'pytest test.py'
                 // sh 'pytest ./Flask/tests/unit/test_models.py'
             }
             post {
-				always {
+				success {
 					 // sh 'touch test-reports/*.xml'
 					 junit allowEmptyResults: true, testResults: 'test-reports/*.xml'
 				}
