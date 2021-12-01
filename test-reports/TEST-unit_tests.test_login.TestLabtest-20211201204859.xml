@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="unit_tests.test_login.TestLabtest-20211201204859" tests="1" file="unit_tests/test_login.py" time="0.005" timestamp="2021-12-01T20:48:59" failures="0" errors="0" skipped="0">
+	<testcase classname="unit_tests.test_login.TestLabtest" name="test_return_true" time="0.005" timestamp="2021-12-01T20:48:59" file="unit_tests\test_login.py" line="9">
+		<system-out><![CDATA[]]></system-out>
+		<system-err><![CDATA[]]></system-err>
+	</testcase>
+</testsuite>
