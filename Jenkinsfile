@@ -73,15 +73,14 @@ pipeline {
         		}
         	}
         	steps {
- 				sh 'pytest ui_tests/test.py -v --junitxml="results.xml"'
+ 				sh 'pytest ui_tests/ui_test.py -v --junitxml="results.xml"'
         	}
         	post {
         		success {
-						junit allowEmptyResults: true, testResults: 'results.xml'
+					junit allowEmptyResults: true, testResults: 'results.xml'
         		}
         	}
         }
-        
         post {
         	always {
         		echo "Tearing down test containers"
