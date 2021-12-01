@@ -15,21 +15,19 @@ pipeline {
 				// sh 'apt install python3-pip'
 				// sh 'pip install --upgrade pip'
 			}
-		}	
-
-		stage('OWASP DependencyCheck') {
-		    steps {
-		        sh 'echo $JAVA_HOME'
-		        echo "[!] OWASP DependencyCheck"
-		        dependencyCheck additionalArguments: '--format HTML --format XML', odcInstallation: 'Default'
-		    }
-		    post {
-		        success {
-		            dependencyCheckPublisher pattern: 'dependency-check-report.xml'
-		        }
-		    }
 		}
-
+		// stage('OWASP DependencyCheck') {
+		//     steps {
+		//         sh 'echo $JAVA_HOME'
+		//         echo "[!] OWASP DependencyCheck"
+		//         dependencyCheck additionalArguments: '--format HTML --format XML', odcInstallation: 'Default'
+		//     }
+		//     post {
+		//         success {
+		//             dependencyCheckPublisher pattern: 'dependency-check-report.xml'
+		//         }
+		//     }
+		// }
 		stage('Code Quality Check via SonarQube') {
             steps {
                 script {
@@ -37,8 +35,8 @@ pipeline {
                     withSonarQubeEnv() {
                         sh """${scannerHome}/bin/sonar-scanner 
                         -Dsonar.projectKey=lab_test_project -Dsonar.sources=. 
-                        -Dsonar.host.url=http://54.169.255.56:9000 
-                        -Dsonar.login=c90438c478d1d838d420874349cb088721cc68a6"""
+                        -Dsonar.host.url=http://209.97.168.24:9000 
+                        -Dsonar.login=fd12ec9086b35369a557f9f54ccaf22d7dfcf2f0"""
                     }
                 }
             }
