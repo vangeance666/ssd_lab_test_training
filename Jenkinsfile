@@ -65,11 +65,13 @@ pipeline {
 		        		}
 		        	}
 		        	steps {		        		
-		        		input message: "wait"
-		        		sh "python main.py"
-		        		input message: "kill ?"
+		        		echo "python main.py at Dockerfile"
+		        		// input message: "wait"
+		        		// sh "python main.py"
+		        		// input message: "kill ?"
 		        	}
 		        }
+
 
 		     //    stage("Headless Browser Testing") {
 		     //    	agent {
