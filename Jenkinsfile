@@ -41,7 +41,7 @@ pipeline {
         	agent {
         		dockerfile {
 					filename 'Dockerfile.unit_test'
-					args "--network app-test-network"
+					args "-it --network app-test-network"
 					
         		}
         	}
