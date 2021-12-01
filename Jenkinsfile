@@ -62,12 +62,13 @@ pipeline {
 		        	agent {
 		        		dockerfile {
 							filename 'Dockerfile.ui_test'
-							args "--name app-flask-ui-test --network app-test-network -v /root/.m2:/root/.m2"
+							args "--name app-flask-ui-test --network app-test-network --network-alias app-flask-ui-test -v /root/.m2:/root/.m2"
 		        		}
 		        	}
-		        	steps {
-		        		sh "python app.py"
-		        		input message: "Kill UI-Testing test server?"		        		
+		        	steps {		        		
+		        		input message: "wait"		        		
+		        		sh "python main.py"
+		        		input message: "kill ?"
 		        	}
 		        }
 
