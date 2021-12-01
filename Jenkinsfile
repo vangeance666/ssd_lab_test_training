@@ -67,7 +67,8 @@ pipeline {
 		        	steps {		        		
 		        		// echo "python main.py at Dockerfile"
 		        		// input message: "wait"
-		        		sh "python main.py"
+		        		sh 'python main.py > /dev/null 2&1 &'
+		        		// sh "python main.py >> /dev/null"
 		        		// input message: "kill ?"
 		        	}
 		        }
