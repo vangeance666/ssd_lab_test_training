@@ -51,6 +51,7 @@ pipeline {
         		}
         	}
             steps{
+            	input message: "wait"
             	sh 'python test.py'
                 // sh 'pytest test.py'
                 // sh 'pytest ./Flask/tests/unit/test_models.py'
