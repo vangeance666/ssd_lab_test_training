@@ -11,9 +11,6 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
-
-
-
 @pytest.fixture()
 def test_setup():
 	global driver
@@ -25,9 +22,16 @@ def test_setup():
 	yield driver
 	driver.quit()
 
-
 def test_login(test_setup):
-	# driver.get("google.com")
-	print("TITLE", driver.title)
-	assert True
 
+	SERVER_URL = "http://app-flask-ui-test:5000"
+	# driver.get("google.com")
+	print(dirver.page_source)
+
+	
+	driver.get(SERVER_URL) 
+
+
+	
+	
+	assert True

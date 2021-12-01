@@ -6,7 +6,7 @@ networks:
     external: true
 
 services:
-  shark-flask-ui-test:
+  app-flask-ui-test:
     container_name: app-flask-ui-test
 
     image: img-app-flask-ui-test:lastest
