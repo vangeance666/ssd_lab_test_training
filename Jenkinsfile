@@ -11,9 +11,7 @@ pipeline {
 		stage('init') {
 			steps{
 				sh 'apt install docker-compose -y'
-				sh 'apt update'
-				// sh 'apt install python3-pip'
-				// sh 'pip install --upgrade pip'
+				// sh 'apt update'
 			}
 		}
 		// stage('OWASP DependencyCheck') {
@@ -43,11 +41,12 @@ pipeline {
         	agent {
         		dockerfile {
 					filename 'Dockerfile.unit_test'
-					args "--name app-flask-unit-test --network app-test-network"
+					args "--network app-test-network"
 					
         		}
         	}
             steps{
+            	echo "hello"
             	input message: "wait"
             	sh 'python test.py'
                 // sh 'pytest test.py'
@@ -62,47 +61,47 @@ pipeline {
 
         }
 
-        stage("Integration Testing") {
-        	parallel {
-        		stage("Deploy Test Server for ui test") {
-		        	agent {
-		        		dockerfile {
-							filename 'Dockerfile.ui_test'
-							args """
-								 --name app-flask-ui-test
-								 --network app-test-network
-								 -v /root/.m2:/root/.m2
-							"""
-		        		}
-		        	}
-		        	steps {
-		        		sh "python app.py"
-		        		input message: "Kill UI-Testing test server?"		        		
-		        	}
-		        }
+       //  stage("Integration Testing") {
+       //  	parallel {
+       //  		stage("Deploy Test Server for ui test") {
+		     //    	agent {
+		     //    		dockerfile {
+							// filename 'Dockerfile.ui_test'
+							// args """
+							// 	 --name app-flask-ui-test
+							// 	 --network app-test-network
+							// 	 -v /root/.m2:/root/.m2
+							// """
+		     //    		}
+		     //    	}
+		     //    	steps {
+		     //    		sh "python app.py"
+		     //    		input message: "Kill UI-Testing test server?"		        		
+		     //    	}
+		     //    }
 
-		        stage("Headless Browser Testing") {
-		        	agent {
-		        		dockerfile {
-		        			filename 'Dockerfile.'
-		        			args """
-		        			--name selnium-ui-test
-		        			--network app-test-network
-		        			"""
-		        		}
-		        	}
-		        	steps {
-		 				sh 'pytest ui_tests/test.py -v --junitxml="results.xml"'
-		        	}
-		        	post {
-		        		success {
- 							junit allowEmptyResults: true, testResults: 'results.xml'
-		        		}
-		        	}
-		        }
-        	}
+		     //    stage("Headless Browser Testing") {
+		     //    	agent {
+		     //    		dockerfile {
+		     //    			filename 'Dockerfile.'
+		     //    			args """
+		     //    			--name selnium-ui-test
+		     //    			--network app-test-network
+		     //    			"""
+		     //    		}
+		     //    	}
+		     //    	steps {
+		 				// sh 'pytest ui_tests/test.py -v --junitxml="results.xml"'
+		     //    	}
+		     //    	post {
+		     //    		success {
+ 						// 	junit allowEmptyResults: true, testResults: 'results.xml'
+		     //    		}
+		     //    	}
+		     //    }
+       //  	}
 
-        }
+       //  }
 
 ////////////////////////////////
 
