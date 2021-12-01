@@ -17,6 +17,7 @@ services:
 
     build:
       context: ./
+      dockerfile: Dockerfile.ui_test
 
     networks:
       - 'app-test-network'
