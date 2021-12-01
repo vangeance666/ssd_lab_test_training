@@ -10,7 +10,6 @@ pipeline {
 		stage('init') {
 			steps{
 				sh 'apt install docker-compose -y'
-				// sh 'apt update'
 			}
 		}
 		stage('OWASP DependencyCheck') {
@@ -61,7 +60,6 @@ pipeline {
 				sh 'docker-compose -f docker-compose.ui-test.yaml up -d --build'
 			}
 		}
-
 		stage("Headless Browser Testing") {
 			agent {
 				dockerfile {
