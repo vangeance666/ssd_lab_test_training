@@ -27,7 +27,7 @@ def test_setup():
 
 
 def test_login(test_setup):
-	driver.get("google.com")
+	# driver.get("google.com")
 	print("TITLE", driver.title)
 	assert True
 
