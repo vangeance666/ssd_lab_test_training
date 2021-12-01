@@ -36,47 +36,40 @@ pipeline {
   //           }
   //       }
 
-        stage('Unit Test'){
-        	agent {
-        		dockerfile {
-					filename 'Dockerfile.unit_test'
-					args "-it --name app-flask-unit-test --network app-test-network"
-        		}
-        	}
-            steps{
-            	echo "hello"
-            	input message: "wait"
-            	sh 'python test.py'
-                // sh 'pytest test.py'
-                // sh 'pytest ./Flask/tests/unit/test_models.py'
-            }
-            post {
-				success {
-					 // sh 'touch test-reports/*.xml'
-					 junit allowEmptyResults: true, testResults: 'test-reports/*.xml'
-				}
-			}
+   //      stage('Unit Test'){
+   //      	agent {
+   //      		dockerfile {
+			// 		filename 'Dockerfile.unit_test'
+			// 		args "-it --name app-flask-unit-test --network app-test-network"
+   //      		}
+   //      	}
+   //          steps{
+   //          	input message: "wait"
+   //          	sh 'python test.py'
+   //          }
+   //          post {
+			// 	success {
+			// 		 // sh 'touch test-reports/*.xml'
+			// 		 junit allowEmptyResults: true, testResults: 'test-reports/*.xml'
+			// 	}
+			// }
 
-        }
+   //      }
 
-       //  stage("Integration Testing") {
-       //  	parallel {
-       //  		stage("Deploy Test Server for ui test") {
-		     //    	agent {
-		     //    		dockerfile {
-							// filename 'Dockerfile.ui_test'
-							// args """
-							// 	 --name app-flask-ui-test
-							// 	 --network app-test-network
-							// 	 -v /root/.m2:/root/.m2
-							// """
-		     //    		}
-		     //    	}
-		     //    	steps {
-		     //    		sh "python app.py"
-		     //    		input message: "Kill UI-Testing test server?"		        		
-		     //    	}
-		     //    }
+        stage("Integration Testing") {
+        	parallel {
+        		stage("Deploy Test Server for ui test") {
+		        	agent {
+		        		dockerfile {
+							filename 'Dockerfile.ui_test'
+							args "--name app-flask-ui-test --network app-test-network -v /root/.m2:/root/.m2"
+		        		}
+		        	}
+		        	steps {
+		        		sh "python app.py"
+		        		input message: "Kill UI-Testing test server?"		        		
+		        	}
+		        }
 
 		     //    stage("Headless Browser Testing") {
 		     //    	agent {
@@ -97,9 +90,9 @@ pipeline {
 		     //    		}
 		     //    	}
 		     //    }
-       //  	}
+        	}
 
-       //  }
+        }
 
 ////////////////////////////////
 

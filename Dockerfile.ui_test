@@ -6,4 +6,4 @@ ADD . /app
 RUN pip install -r requirements.txt
 RUN apt update && apt upgrade -y && apt install -y firefox-esr
 
-ENTRYPOINT ["/bin/bash"]
+# ENTRYPOINT ["/bin/bash"]
