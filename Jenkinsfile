@@ -40,7 +40,7 @@ pipeline {
         	agent {
         		dockerfile {
 					filename 'Dockerfile.unit_test'
-					args "--name app-flask-unit-test --network app-test-network"
+					args "-it --name app-flask-unit-test --network app-test-network"
         		}
         	}
             steps{
