@@ -103,7 +103,7 @@ pipeline {
 		        	}
 		        	post {
 		        		success {
- 							junit allowEmptyResults: true: 'results.xml'
+ 							junit allowEmptyResults: true, testResults: 'results.xml'
 		        		}
 		        	}
 		        }
