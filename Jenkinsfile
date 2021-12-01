@@ -4,7 +4,6 @@ pipeline {
 
 	environment { 
 		CI = 'true'
-		// DOCKER_BUILDKIT='1'  // For Multistage build for Dockerfile
 	}
 
 	stages {
@@ -47,7 +46,7 @@ pipeline {
             steps{
             	echo "hello"
             	input message: "wait"
-            	// sh 'python test.py'
+            	sh 'python test.py'
                 // sh 'pytest test.py'
                 // sh 'pytest ./Flask/tests/unit/test_models.py'
             }
