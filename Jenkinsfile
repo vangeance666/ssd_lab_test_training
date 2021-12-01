@@ -4,7 +4,7 @@ pipeline {
 
 	environment { 
 		CI = 'true'
-		DOCKER_BUILDKIT='1'  // For Multistage build for Dockerfile
+		// DOCKER_BUILDKIT='1'  // For Multistage build for Dockerfile
 	}
 
 	stages {
@@ -41,7 +41,7 @@ pipeline {
         	agent {
         		dockerfile {
 					filename 'Dockerfile.unit_test'
-					args "-it --network app-test-network"
+					args "-it --entrypoint=/bin/bash --network app-test-network"
 					
         		}
         	}
