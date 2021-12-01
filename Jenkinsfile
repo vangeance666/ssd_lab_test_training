@@ -81,12 +81,14 @@ pipeline {
         		}
         	}
         }
-        post {
-        	always {
-        		echo "Tearing down test containers"
-   				sh 'docker-compose -f docker-compose.ui-test.yaml down -v'
+
+        stage("Teardown of Test Containers") {
+        	steps {
+   				sh 'docker-compose -f docker-compose.ui-test.yaml down -v'	        		
         	}
+
         }
+        
 
        //  stage("Integration Testing") {
        //  	parallel {
