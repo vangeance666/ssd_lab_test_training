@@ -4,12 +4,3 @@ WORKDIR /app
 COPY . .
 
 RUN pip install -r requirements.txt
-
-
-# ENTRYPOINT ["python"]
-# CMD ["test.py"]
-
-
-# From python-base as shark-deploy
-# ENTRYPOINT ["python"]
-# CMD ["main.py"]
