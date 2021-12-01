@@ -1,5 +1,4 @@
 import unittest
-import requests
 
 class TestLabtest(unittest.TestCase):
 	
