@@ -21,11 +21,23 @@ def process_search():
 		if request.form and request.form['search-text']:
 			search_text = request.form['search-text']
 
-			return jsonify({"status": "success"
-				, "xss_detected": Sanitizer.has_xss(search_text)}), 200
+
+			if Sanitizer.has_xss(search_text):
+				flash("XSS String detected")
+				return render_template("index.html") #Wont redirect just regenerate page to clear
+			else: #Sucess then redirect to success with a hyper link to redirect back to index. 
+				return redirect(url_for("main_view.search_result"))
+
+	return redirect(url_for("main_view.index"))
+
+
+
+			# return jsonify({"status": "success"
+			# 	, "xss_detected": Sanitizer.has_xss(search_text)}), 200
 
 		
-	return jsonify({"status": "Failed"}), 400
+	# return jsonify({"status": "Failed"}), 400
+
 
 
 @main_view.route("/searchSuccess/", methods=["GET"])
