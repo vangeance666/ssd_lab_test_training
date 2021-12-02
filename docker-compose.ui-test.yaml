@@ -22,5 +22,8 @@ services:
     networks:
       - 'app-test-network'
 
+    ports:
+      - "5000:5000"
+      
     expose:
       - '5000'

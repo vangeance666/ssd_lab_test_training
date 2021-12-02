@@ -35,7 +35,7 @@ pipeline {
 				dockerfile {
 					filename 'Dockerfile.ui_test'
 					args """
-					--name selnium-ui-test
+					--name selenium-ui-test
 					--network app-test-network
 					"""
 				}
