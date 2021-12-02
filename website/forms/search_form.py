@@ -26,22 +26,3 @@ from wtforms.validators import DataRequired, Length
 class SearchForm(FlaskForm):
 	search_text = StringField('search', validators=[DataRequired()])
 	submit = SubmitField('SearchSubmit')
-
-	# username = StringField('username'
-	# 	, validators=[DataRequired(), Length(max=16)])
-
-	# password = PasswordField('password'
-	# 	, validators=[DataRequired()])
-
-
-
-
-# login
-# appointment
-# otp
-
-# payee:contact form
-# support: contact form
-
-# updateprofile: 
-
