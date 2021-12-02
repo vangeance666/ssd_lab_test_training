@@ -11,6 +11,16 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
+SERVER_URL = "http://app-flask-ui-test:5000"
+
+ID_SEARCH = "search-text-id"
+ID_SUBMIT = "submit-btn"
+ID_SUCCESS = "success-id"
+
+ID_DETECT_HOME = "detect-home"
+
+ID_DETECT_SUCCESS = "success-id"
+
 @pytest.fixture()
 def test_setup():
 	global driver
@@ -22,26 +32,40 @@ def test_setup():
 	yield driver
 	driver.quit()
 
-def test_search_xss(test_setup):
-	ID_SEARCH = "search-text-id"
-	ID_SUBMIT = "submit-btn"
 
-	ID_SUCCESS = "success-id"
-
-	# SERVER_URL = "http://app-flask-ui-test:5000"
-	SERVER_URL = "http://localhost:5000"
-	driver.get(SERVER_URL)
-
-	driver.implicitly_wait(3)
-
+def do_fill_search(search_message):
 	search_input = driver.find_element_by_id(ID_SEARCH)
-	search_input.send_keys("<script>")
+	search_input.send_keys(search_message)
 
 	submit_btn = dirver.find_element_by_id(ID_SUBMIT)
 
-
+	submit_btn.click()
 	driver.implicitly_wait(2)
 
-	no_xss_ele = driver.find_element_by_id(ID_SUCCESS)
 
-	assert "well done no XSS in search" in no_xss_ele
+def test_search_xss(test_setup):
+	"""TO ensure that XSS search will not go thru
+	To pass, need to ensure that it stays within home page and not redirected to sucess.
+	"""
+
+	driver.get(SERVER_URL)
+	driver.implicitly_wait(3)
+
+	do_fill_search("<script> alert('1');</script>")
+
+	# After search with XSS ensure that will still be in home page by checkingif element is still there
+	
+	home_page_ele = driver.find_element_by_id(ID_SEARCH)
+
+
+	assert "well done no XSS in search" != None
+
+
+def test_no_xss(test_setup):
+    """Test non-xss string can go redirect
+    """
+	success_ele = driver.find_element_by_id(ID_SUCCESS)
+
+	assert "well done" in success_ele.text
+
+
