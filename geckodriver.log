@@ -1,0 +1,165 @@
+1638439355478	geckodriver	INFO	Listening on 127.0.0.1:53737
+1638439358560	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "53738" "-no-remote" "-profile" "C:\\Users\\User\\AppData\\Local\\Temp\\rust_mozprofilerIrBlq"
+1638439359016	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\User\\AppData\\Local\\Temp\\rust_mozprofilerIrBlq\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:53738/devtools/browser/3a133e42-47aa-42ce-9fb1-8579f5612ae9
+1638439361319	Marionette	INFO	Listening on port 53743
+1638439361734	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js, line 6: TypeError: i is undefined
+1638439362508	Marionette	INFO	Stopped listening on port 53743
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1638439363673	geckodriver	INFO	Listening on 127.0.0.1:53796
+1638439366717	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "53797" "-no-remote" "-profile" "C:\\Users\\User\\AppData\\Local\\Temp\\rust_mozprofilebUgFry"
+1638439367153	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\User\\AppData\\Local\\Temp\\rust_mozprofilebUgFry\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:53797/devtools/browser/a269a3dd-cba3-463c-925b-04e6ed309663
+1638439369381	Marionette	INFO	Listening on port 53802
+1638439369891	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js, line 6: TypeError: i is undefined
+1638439373545	Marionette	INFO	Stopped listening on port 53802
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1638439408970	geckodriver	INFO	Listening on 127.0.0.1:53857
+1638439412076	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "53858" "-no-remote" "-profile" "C:\\Users\\User\\AppData\\Local\\Temp\\rust_mozprofileo3f3SQ"
+1638439412498	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\User\\AppData\\Local\\Temp\\rust_mozprofileo3f3SQ\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:53858/devtools/browser/9d5d84d3-d045-45b9-946e-02661e4df882
+1638439414885	Marionette	INFO	Listening on port 53863
+1638439415259	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js, line 6: TypeError: i is undefined
+1638439415998	Marionette	INFO	Stopped listening on port 53863
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1638439417124	geckodriver	INFO	Listening on 127.0.0.1:53919
+1638439420181	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "53920" "-no-remote" "-profile" "C:\\Users\\User\\AppData\\Local\\Temp\\rust_mozprofileVRrRJi"
+1638439420583	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\User\\AppData\\Local\\Temp\\rust_mozprofileVRrRJi\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:53920/devtools/browser/798c308b-71bd-4996-9cb4-5f34760e7ca1
+1638439422730	Marionette	INFO	Listening on port 53925
+1638439422856	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js, line 6: TypeError: i is undefined
+1638439426380	Marionette	INFO	Stopped listening on port 53925
+1638439527081	geckodriver	INFO	Listening on 127.0.0.1:53988
+1638439530181	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "53989" "-no-remote" "-profile" "C:\\Users\\User\\AppData\\Local\\Temp\\rust_mozprofileblLjFs"
+1638439530592	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\User\\AppData\\Local\\Temp\\rust_mozprofileblLjFs\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:53989/devtools/browser/374d6a11-998c-4e27-ac49-ea78aa51ee82
+1638439532767	Marionette	INFO	Listening on port 53994
+1638439532861	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js, line 6: TypeError: i is undefined
+1638439533623	Marionette	INFO	Stopped listening on port 53994
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1638439535080	geckodriver	INFO	Listening on 127.0.0.1:54036
+1638439538170	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "54037" "-no-remote" "-profile" "C:\\Users\\User\\AppData\\Local\\Temp\\rust_mozprofile2ypjmt"
+1638439538578	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\User\\AppData\\Local\\Temp\\rust_mozprofile2ypjmt\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:54037/devtools/browser/b212280f-8796-4ca9-91dd-fc3104608a70
+1638439540896	Marionette	INFO	Listening on port 54042
+1638439541344	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js, line 6: TypeError: i is undefined
+1638439541863	Marionette	INFO	Stopped listening on port 54042
+JavaScript error: resource://gre/modules/Sqlite.jsm, line 714: Error: Connection closed before committing the transaction.
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1638439560418	geckodriver	INFO	Listening on 127.0.0.1:54085
+1638439563488	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "54086" "-no-remote" "-profile" "C:\\Users\\User\\AppData\\Local\\Temp\\rust_mozprofilefHBkbe"
+1638439563924	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\User\\AppData\\Local\\Temp\\rust_mozprofilefHBkbe\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:54086/devtools/browser/00de32ca-125f-4a78-89e7-e093073a8845
+1638439566087	Marionette	INFO	Listening on port 54092
+1638439566162	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js, line 6: TypeError: i is undefined
+JavaScript error: http://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js, line 6: TypeError: i is undefined
+1638439566861	Marionette	INFO	Stopped listening on port 54092
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1638439567978	geckodriver	INFO	Listening on 127.0.0.1:54142
+1638439571054	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "54143" "-no-remote" "-profile" "C:\\Users\\User\\AppData\\Local\\Temp\\rust_mozprofileSBE52w"
+1638439571439	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\User\\AppData\\Local\\Temp\\rust_mozprofileSBE52w\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:54143/devtools/browser/4ec4f810-0ab2-4e87-8614-776bdf993f3c
+1638439573791	Marionette	INFO	Listening on port 54148
+1638439574243	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js, line 6: TypeError: i is undefined
+JavaScript error: http://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js, line 6: TypeError: i is undefined
+1638439574870	Marionette	INFO	Stopped listening on port 54148
+1638439895164	geckodriver	INFO	Listening on 127.0.0.1:54220
+1638439898267	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "54221" "-no-remote" "-profile" "C:\\Users\\User\\AppData\\Local\\Temp\\rust_mozprofileMDdlkP"
+1638439898688	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\User\\AppData\\Local\\Temp\\rust_mozprofileMDdlkP\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:54221/devtools/browser/c0797ae2-bb2c-4016-8504-9c8a7cb42776
+1638439900877	Marionette	INFO	Listening on port 54226
+1638439900946	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js, line 6: TypeError: i is undefined
+JavaScript error: http://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js, line 6: TypeError: i is undefined
+1638439901810	Marionette	INFO	Stopped listening on port 54226
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1638439902911	geckodriver	INFO	Listening on 127.0.0.1:54277
+1638439906013	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "54278" "-no-remote" "-profile" "C:\\Users\\User\\AppData\\Local\\Temp\\rust_mozprofileuYR5an"
+1638439906432	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\User\\AppData\\Local\\Temp\\rust_mozprofileuYR5an\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:54278/devtools/browser/3804c8ce-140c-4edf-8f75-7c0bf9293acd
+1638439908618	Marionette	INFO	Listening on port 54283
+1638439908679	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js, line 6: TypeError: i is undefined
+JavaScript error: http://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js, line 6: TypeError: i is undefined
+1638439909291	Marionette	INFO	Stopped listening on port 54283
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1638439954349	geckodriver	INFO	Listening on 127.0.0.1:54332
+1638439957417	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "54333" "-no-remote" "-profile" "C:\\Users\\User\\AppData\\Local\\Temp\\rust_mozprofileZXzAyQ"
+1638439957814	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\User\\AppData\\Local\\Temp\\rust_mozprofileZXzAyQ\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:54333/devtools/browser/978d1afc-a645-48de-a883-89f286274fa6
+1638439960015	Marionette	INFO	Listening on port 54338
+1638439960089	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js, line 6: TypeError: i is undefined
+JavaScript error: http://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js, line 6: TypeError: i is undefined
+1638439960933	Marionette	INFO	Stopped listening on port 54338
+1638439962098	geckodriver	INFO	Listening on 127.0.0.1:54389
+1638439965147	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "54390" "-no-remote" "-profile" "C:\\Users\\User\\AppData\\Local\\Temp\\rust_mozprofilegyf5W7"
+1638439965557	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\User\\AppData\\Local\\Temp\\rust_mozprofilegyf5W7\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:54390/devtools/browser/52d401ef-b488-4621-bd27-a2d62002a025
+1638439967690	Marionette	INFO	Listening on port 54395
+1638439967827	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js, line 6: TypeError: i is undefined
+JavaScript error: http://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js, line 6: TypeError: i is undefined
+1638439968494	Marionette	INFO	Stopped listening on port 54395
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1638439988036	geckodriver	INFO	Listening on 127.0.0.1:54444
+1638439991097	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "54445" "-no-remote" "-profile" "C:\\Users\\User\\AppData\\Local\\Temp\\rust_mozprofile4x7eUO"
+1638439991497	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\User\\AppData\\Local\\Temp\\rust_mozprofile4x7eUO\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:54445/devtools/browser/b2aa518a-b66e-4dba-8b2f-9853e6eef72a
+1638439993624	Marionette	INFO	Listening on port 54450
+1638439993770	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js, line 6: TypeError: i is undefined
+JavaScript error: http://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js, line 6: TypeError: i is undefined
+1638439994408	Marionette	INFO	Stopped listening on port 54450
+1638439995495	geckodriver	INFO	Listening on 127.0.0.1:54499
+1638439998574	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "54500" "-no-remote" "-profile" "C:\\Users\\User\\AppData\\Local\\Temp\\rust_mozprofileLtjoWp"
+1638439998990	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\User\\AppData\\Local\\Temp\\rust_mozprofileLtjoWp\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:54500/devtools/browser/746e56af-1ee0-4fb6-980a-e7bc44180abf
+1638440001129	Marionette	INFO	Listening on port 54505
+1638440001238	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js, line 6: TypeError: i is undefined
+JavaScript error: http://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js, line 6: TypeError: i is undefined
+1638440001869	Marionette	INFO	Stopped listening on port 54505
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+

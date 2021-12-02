@@ -12,7 +12,7 @@ main_view = Blueprint('main_view'
 @main_view.route('/')
 def index():
 	# return render_template('upload.html')	
-	return render_template('index.html', form=SupportForm())
+	return render_template('index.html', form=SearchForm())
 
 @main_view.route("/processSearch/", methods=["POST"])
 def process_search():
@@ -24,7 +24,7 @@ def process_search():
 
 		if Sanitizer.has_xss(search_text):
 			flash("XSS String detected", category='error')
-			return render_template("index.html") #Wont redirect just regenerate page to clear
+			return redirect(url_for("main_view.index"))
 		else: #Sucess then redirect to success with a hyper link to redirect back to index. 
 			return redirect(url_for("main_view.search_result"))
 
