@@ -62,8 +62,12 @@ def test_search_xss(test_setup):
 
 
 def test_no_xss(test_setup):
-    """Test non-xss string can go redirect
-    """
+	"""Test non-xss string can go redirect
+	"""
+
+	driver.get(SERVER_URL)
+	driver.implicitly_wait(3)
+	
 	success_ele = driver.find_element_by_id(ID_SUCCESS)
 
 	assert "well done" in success_ele.text
