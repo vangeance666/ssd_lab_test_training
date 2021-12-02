@@ -27,6 +27,9 @@ pipeline {
 		stage("Build UI-Testing Container") {
 			steps {
 			// Build the ui-test container and runs it for headless testing
+				sh 'docker-compose -f docker-compose.ui-test-server.yaml down -v'
+				
+
 				sh 'docker-compose -f docker-compose.ui-test-server.yaml up -d --build'
 			}
 		}
