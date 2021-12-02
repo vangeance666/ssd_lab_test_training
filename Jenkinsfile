@@ -57,7 +57,7 @@ pipeline {
 
 		stage("Teardown of Test Containers") {
 			steps {
-				sh 'docker-compose -f docker-compose.ui-test.yaml down -v'              
+				sh 'docker-compose -f docker-compose.ui-test-server.yaml down -v'           
 			}
 
 		}
