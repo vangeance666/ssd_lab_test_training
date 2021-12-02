@@ -21,7 +21,6 @@ def process_search():
 		if request.form and request.form['search-text']:
 			search_text = request.form['search-text']
 
-
 			if Sanitizer.has_xss(search_text):
 				flash("XSS String detected")
 				return render_template("index.html") #Wont redirect just regenerate page to clear

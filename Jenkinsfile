@@ -12,18 +12,18 @@ pipeline {
 				sh 'apt install docker-compose -y'
 			}
 		}
-		stage('OWASP DependencyCheck') {
-			steps {
-				sh 'echo $JAVA_HOME'
-				echo "[!] OWASP DependencyCheck"
-				dependencyCheck additionalArguments: '--format HTML --format XML', odcInstallation: 'Default'
-			}
-			post {
-				success {
-					dependencyCheckPublisher pattern: 'dependency-check-report.xml'
-				}
-			}
-		}
+		// stage('OWASP DependencyCheck') {
+		// 	steps {
+		// 		sh 'echo $JAVA_HOME'
+		// 		echo "[!] OWASP DependencyCheck"
+		// 		dependencyCheck additionalArguments: '--format HTML --format XML', odcInstallation: 'Default'
+		// 	}
+		// 	post {
+		// 		success {
+		// 			dependencyCheckPublisher pattern: 'dependency-check-report.xml'
+		// 		}
+		// 	}
+		// }
 		stage('Code Quality Check via SonarQube') {
 			steps {
 				script {
@@ -35,23 +35,23 @@ pipeline {
 			}
 		}
 
-		stage('Unit Test'){
-			agent {
-				dockerfile {
-					filename 'Dockerfile.unit_test'
-					args "-it --name app-flask-unit-test --network app-test-network"
-				}
-			}
-			steps{
-				input message: "wait"
-				sh 'python test.py'
-			}
-			post {
-				success {
-					junit allowEmptyResults: true, testResults: 'test-reports/*.xml'
-				}
-			}
-		}
+		// stage('Unit Test'){
+		// 	agent {
+		// 		dockerfile {
+		// 			filename 'Dockerfile.unit_test'
+		// 			args "-it --name app-flask-unit-test --network app-test-network"
+		// 		}
+		// 	}
+		// 	steps{
+		// 		input message: "wait"
+		// 		sh 'python test.py'
+		// 	}
+		// 	post {
+		// 		success {
+		// 			junit allowEmptyResults: true, testResults: 'test-reports/*.xml'
+		// 		}
+		// 	}
+		// }
 
 		stage("Build UI-Testing Container") {
 			steps {
