@@ -25,7 +25,7 @@ ID_DETECT_SUCCESS = "success-id"
 def test_setup():
 	global driver
 	options = Options()
-	# options.headless = True
+	options.headless = True
 
 	s = Firefox_Service(GeckoDriverManager().install())
 	driver = webdriver.Firefox(service=s, options=options)
