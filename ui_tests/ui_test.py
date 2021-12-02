@@ -13,12 +13,11 @@ from selenium.webdriver.support import expected_conditions as EC
 
 SERVER_URL = "http://app-flask-ui-test:5000"
 # SERVER_URL = 'http://localhost:5000'
-ID_SEARCH = "search-text-id"
-ID_SUBMIT = "submit-btn"
+ID_SEARCH = "search_text"
+ID_SUBMIT = "submit"
+
 ID_SUCCESS = "success-id"
-
 ID_DETECT_HOME = "detect-home"
-
 ID_DETECT_SUCCESS = "success-id"
 
 @pytest.fixture()
