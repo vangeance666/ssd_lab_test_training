@@ -70,7 +70,8 @@ pipeline {
 				}
 			}
 			steps {
-				sh 'pytest ui_tests/tests/test_login.py -v --junitxml="results.xml"'
+				// sh 'pytest ui_tests/tests/test_login.py -v --junitxml="results.xml"'
+				sh 'pytest ui_tests/ui_test.py -v --junitxml="results.xml"'
 			}
 			post {
 				success {

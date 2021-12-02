@@ -22,16 +22,26 @@ def test_setup():
 	yield driver
 	driver.quit()
 
-def test_login(test_setup):
+def test_search_xss(test_setup):
+	ID_SEARCH = "search-text-id"
+	ID_SUBMIT = "submit-btn"
 
-	SERVER_URL = "http://app-flask-ui-test:5000"
-	# driver.get("google.com")
-	print(dirver.page_source)
+	ID_SUCCESS = "success-id"
 
-	
-	driver.get(SERVER_URL) 
+	# SERVER_URL = "http://app-flask-ui-test:5000"
+	SERVER_URL = "http://localhost:5000"
+	driver.get(SERVER_URL)
+
+	driver.implicitly_wait(3)
+
+	search_input = driver.find_element_by_id(ID_SEARCH)
+	search_input.send_keys("<script>")
+
+	submit_btn = dirver.find_element_by_id(ID_SUBMIT)
 
 
-	
-	
-	assert True
+	driver.implicitly_wait(2)
+
+	no_xss_ele = driver.find_element_by_id(ID_SUCCESS)
+
+	assert "well done no XSS in search" in no_xss_ele

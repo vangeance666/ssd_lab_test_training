@@ -1,4 +1,7 @@
 from flask import Blueprint, render_template, request, url_for, redirect, session, jsonify, flash
+import sys
+from website.processing.sanitizer import Sanitizer
+
 
 main_view = Blueprint('main_view'
 	, __name__
@@ -9,6 +12,26 @@ main_view = Blueprint('main_view'
 def index():
 	# return render_template('upload.html')
 	return render_template('index.html')
+
+@main_view.route("/processSearch/", methods=["POST"])
+def process_search():
+	if request.method == "POST":
+		print(request.form, flush=True)
+
+		if request.form and request.form['search-text']:
+			search_text = request.form['search-text']
+
+			return jsonify({"status": "success"
+				, "xss_detected": Sanitizer.has_xss(search_text)}), 200
+
+		
+	return jsonify({"status": "Failed"}), 400
+
+
+@main_view.route("/searchSuccess/", methods=["GET"])
+def search_result():
+	return render_template("success.html")
+
 
 # @main_view.route('/upload/')
 # def upload():
