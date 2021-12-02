@@ -51,7 +51,6 @@ pipeline {
 					junit allowEmptyResults: true, testResults: 'test-reports/*.xml'
 				}
 			}
-
 		}
 
 		stage("Build UI-Testing Container") {
