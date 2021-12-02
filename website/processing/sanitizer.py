@@ -9,7 +9,12 @@ class Sanitizer:
 
 	@staticmethod
 	def has_xss(data: str):
-		return (Sanitizer.escape_data(data) != data) or ""
+		""" The basis of detecting XSS is that if it has
+		Strings that require encoding. So if it doesnt match
+		we assume that it has XSS. Regex to detect XSS is too mcuh and not realistic
+		to check for every thing
+		"""
+		return (Sanitizer.escape_data(data) != data) or "<scipt> alert(1)</script>"
 
 	def process(self, input: str):
 		pass
