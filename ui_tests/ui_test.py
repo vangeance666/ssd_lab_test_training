@@ -12,8 +12,8 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
 from selenium.common.exceptions import NoSuchElementException
-# SERVER_URL = "http://app-flask-ui-test:5000"
-SERVER_URL = 'http://localhost:5000'
+SERVER_URL = "http://app-flask-ui-test:5000"
+# SERVER_URL = 'http://localhost:5000'
 ID_SEARCH = "search_text"
 ID_SUBMIT = "submit"
 
