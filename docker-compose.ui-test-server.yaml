@@ -11,19 +11,19 @@ services:
 
     image: img-app-flask-ui-test:lastest
 
-    stdin_open: true # docker run -i
+    # stdin_open: true # docker run -i
     
-    tty: true 
+    # tty: true 
 
     build:
       context: ./
-      dockerfile: Dockerfile.ui_test
+      dockerfile: Dockerfile.ui_test_server
 
     networks:
       - 'app-test-network'
 
     ports:
       - "5000:5000"
-      
+
     expose:
       - '5000'

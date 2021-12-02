@@ -31,19 +31,19 @@ def process_search():
 	return redirect(url_for("main_view.index"))
 
 	
-	if request.method == "POST":
-		print(request.form, flush=True)
+	# if request.method == "POST":
+	# 	print(request.form, flush=True)
 
-		if request.form and request.form['search-text']:
-			search_text = request.form['search-text']
+	# 	if request.form and request.form['search-text']:
+	# 		search_text = request.form['search-text']
 
-			if Sanitizer.has_xss(search_text):
-				flash("XSS String detected")
-				return render_template("index.html") #Wont redirect just regenerate page to clear
-			else: #Sucess then redirect to success with a hyper link to redirect back to index. 
-				return redirect(url_for("main_view.search_result"))
+	# 		if Sanitizer.has_xss(search_text):
+	# 			flash("XSS String detected")
+	# 			return render_template("index.html") #Wont redirect just regenerate page to clear
+	# 		else: #Sucess then redirect to success with a hyper link to redirect back to index. 
+	# 			return redirect(url_for("main_view.search_result"))
 
-	return redirect(url_for("main_view.index"))
+	# return redirect(url_for("main_view.index"))
 
 
 
